@@ -13,3 +13,5 @@
 `mcl data.mci -I 2`
 
 `mcxdump -icl out.data.mci.I20 -tabr data.tab -o dump.data.m20.I20`
+
+`mcl2tbl.py dump.data.m20.I20 > clustertbl.txt`
