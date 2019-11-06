@@ -6,7 +6,9 @@
   
 `awk '{ if ($3 >= .2) print }' blastfile.abc > blastfile.filt.abc` 
 
-`mcxload -abc blastfile.filt.abc --stream-mirror -write-tab data.tab -o data.mci`
+`cut -f 1,2,3 blastfile.filt.abc > blastfile.filt.cut.abc`
+
+`mcxload -abc blastfile.filt.cut.abc --stream-mirror -write-tab data.tab -o data.mci`
 
 `mcl data.mci -I 2`
 
