@@ -1,8 +1,8 @@
 # phage_clustering
 
-`blastn -query newphage_LES_missing.fasta -subject newphage_LES_missing.fasta -evalue .01 -outfmt '6 std slen qlen'`
+`blastn -query newphage_LES_missing.fasta -subject newphage_LES_missing.fasta -evalue .01 -outfmt '6 std slen qlen' > blastfile` 
 
-`Blast_to_MCL.1.py <blastfile> > blastfile.abc`
+`Blast_to_MCL.1.py blastfile > blastfile.abc`
   
 `awk '{ if ($3 >= .2) print }' blastfile.abc > blastfile.filt.abc` 
 
